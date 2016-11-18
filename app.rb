@@ -3,5 +3,5 @@ configure { set :server, :puma }
 
 
 get '/' do
-  eb :index
+  erb :index
 end
