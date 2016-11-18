@@ -1,2 +1,2 @@
 require './app'
-run wyncodeMockupAPP
+run WyncodeCyclesApp

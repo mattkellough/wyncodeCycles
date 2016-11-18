@@ -1,7 +1,8 @@
 require 'sinatra'
 configure { set :server, :puma }
 
-
-get '/' do
-  erb :index
+class WyncodeCyclesApp < Sinatra::Base
+  get '/' do
+    erb :index
+  end
 end
