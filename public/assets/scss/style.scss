@@ -1,0 +1,130 @@
+.container {
+  min-width: 960px;
+  background: #020203;
+  margin: 0 auto;
+}
+
+.dark {
+  background-color: #020203;
+  color: #fff;
+}
+
+.backgroundAnimated {
+  position: relative;
+  transition: color 75ms ease-in;
+  z-index: 0;
+  &:after {
+    position: absolute;
+    transition: .3s;
+    content: '';
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    height: 100%;
+    transition: 275ms cubic-bezier(.37,.74,.15,1.2);
+    background-color: #fd4722;
+    z-index: -1;
+  }
+  &:hover:after{
+    width: 100%;
+    left: 0;
+  }
+}
+
+.headerRow {
+  height: 36px;
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #212122;
+  .rowAnchors {
+    width: 350px;
+    height: 100%;
+    display: flex;
+    text-align: right;
+    float: right;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    a {
+      font: 11px 'Brandon Grotesque';
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #a5a5a6;
+      letter-spacing: 2px;
+      padding: 10px;
+      cursor: pointer;
+      transition: color 120ms ease-in;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.menu {
+  position: relative;
+  height: 70px;
+  width: 100%;
+  border-bottom: 1px solid #212122;
+  font-size: 0;
+  .mainLogo {
+    position: relative;
+    display: inline-block;
+    width: 10%;
+    height: 100%;
+    svg {
+      height: 40px;
+      width: 40px;
+      position: absolute;
+      left: 30px;
+      top: 13px;
+      transition: 250ms ease-in;
+    }
+  }
+  .navItems {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+    position: relative;
+    vertical-align: top;
+    font-size: 0;
+    a {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #fff;
+      font: 14px 'Brandon Grotesque';
+      letter-spacing: 2px;
+      padding: 0 20px;
+      vertical-align: middle;
+      line-height: 70px;
+      height: 100%;
+      display: inline-block;
+    }
+  }
+  .search {
+    width: 20%;
+    display: inline-flex;
+    align-items: flex-end;
+    overflow: hidden;
+    svg {
+      height: 25px;
+    }
+  }
+}
+
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src:url('/assets/fonts/Brandon Grotesque/Brandon Grotesque Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src:url('/assets/fonts/Brandon Grotesque/Brandon Grotesque Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
