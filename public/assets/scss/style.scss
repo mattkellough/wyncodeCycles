@@ -109,6 +109,11 @@
     display: inline-flex;
     align-items: flex-end;
     overflow: hidden;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    vertical-align: top;
     svg {
       height: 25px;
     }
