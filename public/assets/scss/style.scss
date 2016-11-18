@@ -137,6 +137,10 @@
       background-color: rgba(2,2,3,.35);
       height: 100%;
       overflow: hidden;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
       .main-logo-large {
         position: absolute;
         width: 580px;
@@ -166,6 +170,23 @@
           bottom: 30px;
           right: 30px;
         }
+      }
+    }
+    .sliderContent {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      .sliderMask {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      img {
+        position: absolute;
+        float: left;
+        height: 100%;
+        width: 100%;
       }
     }
   }
