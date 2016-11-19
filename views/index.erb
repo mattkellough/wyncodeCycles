@@ -6,7 +6,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="/assets/css/style.css">
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
   <script type="text/javascript" src="/assets/js/default.js"></script>
 </head>
 <body>
@@ -44,11 +43,25 @@
     </div>
     <div class="pageContent dark">
       <div class="mainSlider">
-        <div class="sliderContent">
-          <div class="sliderMask">
+        <div class="sliderWrapper">
+          <div class="sliderImages">
             <img src="/assets/img/stage-slider-1.jpg" />
             <img src="/assets/img/stage-slider-2.jpg" />
+            <img src="/assets/img/stage-slider-3.jpg" />
+            <img src="/assets/img/stage-slider-4.jpg" />
+            <img src="/assets/img/stage-slider-5.jpg" />
+            <img src="/assets/img/stage-slider-6.jpg" />
           </div>
+          <a href="" class="sliderNav prev">
+            <i class="icon-leftRed">
+              <svg><use xlink:href="assets/img/ui.svg#chevron-left-red" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+            </i>
+          </a>
+          <a href="" class="sliderNav next">
+            <i class="icon-rightRed">
+              <svg><use xlink:href="assets/img/ui.svg#chevron-right-red" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+            </i>
+          </a>
         </div>
         <div class="sliderOverlay">
           <i class="main-logo-large">
@@ -58,6 +71,9 @@
             <svg><use xlink:href="assets/img/ui.svg#rdd-white" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
           </i>
         </div>
+      </div>
+      <div class="blackArgyle">
+        <div class="square"></div>
       </div>
     </div>
   </div>

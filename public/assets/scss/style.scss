@@ -133,6 +133,7 @@
     position: relative;
     width: 100%;
     height: calc(100vh - 70px - 37px);
+    border-bottom: 1px solid #212122;
     .sliderOverlay {
       background-color: rgba(2,2,3,.35);
       height: 100%;
@@ -172,25 +173,117 @@
         }
       }
     }
-    .sliderContent {
-      position: relative;
-      width: 100%;
+    .sliderWrapper {
       height: 100%;
-      .sliderMask {
-        overflow: hidden;
-        position: relative;
-        width: 100%;
-        height: 100%;
-      }
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+    }
+    .sliderImages {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      overflow: hidden;
       img {
-        position: absolute;
-        float: left;
+        display: block;
         height: 100%;
         width: 100%;
+        position: absolute;
+      }
+    }
+    .sliderNav {
+      position: absolute;
+      top: 50%;
+      margin-top: -35px;
+      display: inline-block;
+      text-align: center;
+      line-height: 45px;
+      vertical-align: middle;
+      z-index: 99;
+      padding: 10px;
+      i {
+        vertical-align: middle;
+        line-height: 45px;
+        z-index: 99;
+        height: 30px;
+        width: 30px;
+        display: block;
+        svg {
+          height: 100%;
+          width: 100%;
+        }
+      }
+      &.next {
+        right: 30px;
+        animation: toTheRightOut 100ms linear forwards;
+        &:hover {
+          animation: toTheRightIn 100ms linear forwards;
+        }
+      }
+      &.prev {
+        left: 30px;
+        animation: toTheLeftOut 100ms linear forwards;
+        &:hover {
+          animation: toTheLeftIn 100ms linear forwards;
+        }
       }
     }
   }
+  .blackArgyle {
+    height: 235px;
+    width: 100%;
+    background: url('/assets/img/bg-diamonds-dark.svg') top left repeat;
+    position: relative;
+    .square {
+      width: 304px;
+      height: 118px;
+      border: 3px solid #fff;
+      margin: 0 auto;
+      position: relative;
+      background: #020203;
+      top: 60px;
+    }
+  }
 }
+
+@keyframes toTheRightIn {
+  from {
+    right: 30px;
+  }
+
+  to {
+    right: 25px;
+  }
+}
+
+@keyframes toTheRightOut {
+  from {
+    right: 25px;
+  }
+
+  to {
+    right: 30px;
+  }
+}
+
+@keyframes toTheLeftIn {
+  from {
+    left: 30px;
+  }
+  to {
+    left: 25px;
+  }
+}
+
+@keyframes toTheLeftOut {
+  from {
+    left: 25px;
+  }
+  to {
+    left: 30px;
+  }
+}
+
 
 @font-face {
   font-family: 'Brandon Grotesque';
